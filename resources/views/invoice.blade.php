@@ -9,17 +9,17 @@
     <title>Invoice</title>
 
 
-    <link rel="stylesheet" href="{{ asset('pdf.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ public_path('pdf.css') }}" type="text/css">
 </head>
 
 <body>
     <table class="w-full">
         <tr>
             <td class="w-half">
-                <img src="{{ asset('logo.jpg')}}" width="200" alt="Ostad Invoice">
+                <img src="{{ public_path('logo.jpg')}}" width="200" alt="Ostad Invoice">
             </td>
             <td class="w-half">
-                <h2>Invoice ID: 834847473</h2>
+                <h2>বাংলা ইনভয়েস: ১২৩৪৫৬</h2>
             </td>
         </tr>
     </table>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Spatie\LaravelPdf\Facades\Pdf as LaravelPdf;
 
 class PDFController extends Controller
 {
@@ -31,5 +32,18 @@ class PDFController extends Controller
         ];
 
         return view('invoice',['data'=>$data]);
+    }
+
+    function getSpatiePDF(){
+        $data = [
+            [
+                'quantity' => 1,
+                'description' => '1 Year Subscription',
+                'price' => '129.00'
+            ]
+        ];
+        return LaravelPdf::view('invoice', ['data' => $data])
+        ->format('A4')
+        ->save('invoice.pdf');
     }
 }

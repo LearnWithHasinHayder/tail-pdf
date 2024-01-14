@@ -22,3 +22,4 @@ Route::view('/about', 'about');
 
 Route::get('/invoice', [PDFController::class, 'getPdf']);
 Route::get('/invoicehtml', [PDFController::class, 'getHtml']);
+Route::get('/spatieinvoice', [PDFController::class, 'getSpatiePDF']);
